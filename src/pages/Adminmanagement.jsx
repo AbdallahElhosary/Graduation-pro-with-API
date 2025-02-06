@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Trash2, AlertCircle, UserPlus } from 'lucide-react'
+import { Trash2, Pencil,AlertCircle, UserPlus } from 'lucide-react'
+import MainTitle from '../components/MainTitle'
 
 // Custom Components
 const CustomCard = ({ children, className }) => (
@@ -194,18 +195,14 @@ export default function AdminManagementPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-2xl">
+      <MainTitle title="Admins Management" /> 
+      <main className="flex-grow container mx-auto px-4 py-6 max-w-2xl">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.h1
-            className="text-4xl font-bold mb-8 text-center text-gray-800"
-            variants={itemVariants}
-          >
-            Admin Management
-          </motion.h1>
+          
           <motion.div variants={itemVariants}>
             <CustomCard className="mb-8">
               <CustomCardHeader>
@@ -268,6 +265,20 @@ export default function AdminManagementPage() {
                       <div>
                         <h3 className="font-medium text-gray-800">{admin.name}</h3>
                         <p className="text-sm text-gray-500">{admin.email}</p>
+                      </div>
+                      <div className="space-x-2 flex">
+                        <CustomButton
+                          variant="outline"
+                          // onClick={() => setEditingCourse(course)}
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </CustomButton>
+                        <CustomButton
+                          variant="destructive"
+                          // onClick={() => setDeletingCourse(course)}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </CustomButton>
                       </div>
                       <CustomDialog open={!!adminToDelete} onOpenChange={() => setAdminToDelete(null)}>
                         <CustomDialogTrigger>

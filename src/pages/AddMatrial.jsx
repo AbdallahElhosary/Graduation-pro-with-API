@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaYoutubeSquare, FaGoogleDrive } from "react-icons/fa";
-import {  GraduationCap } from 'lucide-react';
+import MainTitle from "../components/MainTitle";
 function AddCourseMaterial() {
     const [form, setForm] = useState({
         materialName: "",
@@ -19,15 +19,11 @@ function AddCourseMaterial() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-100">
-
-            <header className="bg-blue-600 text-white py-4 px-6 flex items-center justify-center shadow-md">
-                <GraduationCap className="w-6 h-6 mr-2" />
-                <h1 className="text-xl font-bold mb-0">Academy Guide</h1>
-            </header>
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 w-5/6 m-auto">
-            <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-md w-5/6 ">
-                <h2 className="text-2xl font-bold mb-4">Add New Course Material</h2>
+        <div className="min-h-screen  flex-col bg-gray-100">
+            <MainTitle title="Add Matrial" />
+            
+        <div className="flex justify-center items-center  bg-gray-100 w-5/6 m-auto py-4">
+            <div className=" mx-auto bg-white p-6 rounded-2xl shadow-md w-5/6 ">
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-gray-700">Material Name</label>

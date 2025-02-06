@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, Button, Form, FormControl, FormCheck, FormLabel, FormSelect } from 'react-bootstrap';
 import { X } from 'lucide-react';
+import MainTitle from '../components/MainTitle';
 
 const prerequisites = [
   { id: '1', code: 'CS101', name: 'Introduction to Programming' },
@@ -73,7 +74,8 @@ export default function AddCourseForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 p-6">
+    <div className="min-h-screen bg-gray-100 text-gray-900">
+      <MainTitle title="Add Course" />
       <Card className="max-w-2xl mx-auto bg-white border-gray-300">
         <Card.Header>
           <Card.Title className="text-2xl">Add New Course</Card.Title>

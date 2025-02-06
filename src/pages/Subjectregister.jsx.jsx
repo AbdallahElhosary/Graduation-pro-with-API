@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { PlusCircle, Trash2, AlertCircle } from 'lucide-react'
+import MainTitle from '../components/MainTitle'
 
 const subjectOptions = [
   { id: '1', code: 'MATH101', name: 'Mathematics I', hours: 3, prerequisites: [] },
@@ -94,12 +95,7 @@ export default function SubjectManagementPage() {
           initial="hidden"
           animate="visible"
         >
-          <motion.h1 
-            className="text-4xl font-bold mb-8 text-center"
-            variants={itemVariants}
-          >
-            Subject Selection
-          </motion.h1>
+          <MainTitle title="Subject Selection" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div variants={itemVariants}>
               <Card>

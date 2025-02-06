@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Pencil, Trash2, Plus, Search } from 'lucide-react'
+import MainTitle from '../components/MainTitle'
 
 // Custom Components
 const CustomCard = ({ children, className }) => (
@@ -178,21 +179,15 @@ export default function CourseManagementPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-4xl">
+          <MainTitle title="Courses Management" />
+      <main className="flex-grow container mx-auto px-4 py-6 max-w-4xl">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.h1
-            className="text-4xl font-bold mb-8 text-center text-gray-800"
-            variants={itemVariants}
-          >
-            Course Management
-          </motion.h1>
           <motion.div variants={itemVariants} className="mb-6 flex gap-4">
             <div className="flex-grow">
-              <CustomLabel htmlFor="search-courses">Search Courses</CustomLabel>
               <div className="relative">
                 <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <CustomInput

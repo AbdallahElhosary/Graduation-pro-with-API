@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Globe } from 'lucide-react'
 import militeryImg from "../img/military.jpeg"
+import MainTitle from '../components/MainTitle'
 export default function MilitaryEducationPage() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,7 +31,8 @@ export default function MilitaryEducationPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <main className="flex-grow container mx-auto px-4 py-12">
+      <MainTitle title="Military" /> 
+      <main className="flex-grow container mx-auto px-4 py-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -38,10 +40,7 @@ export default function MilitaryEducationPage() {
         >
           {/* Card Replacement */}
           <div className="w-full max-w-4xl mx-auto bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-            {/* Card Header Replacement */}
-            <div className="p-6 text-center border-b border-gray-200">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Military Education</h1>
-            </div>
+            
 
             {/* Card Content Replacement */}
             <div className="p-6 space-y-6">
@@ -58,7 +57,7 @@ export default function MilitaryEducationPage() {
               {/* Text Content */}
               <motion.div variants={contentVariants} className="space-y-4">
                 <p className="text-lg text-gray-700">
-                  التربيه العسكريه (Military Education) is an essential component of the educational curriculum in many countries,
+                  Military Education is an essential component of the educational curriculum in many countries,
                   aimed at instilling discipline, patriotism, and a sense of duty among students.
                 </p>
                 <p className="text-lg text-gray-700">

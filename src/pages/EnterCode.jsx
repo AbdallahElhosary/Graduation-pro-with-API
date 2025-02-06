@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { GraduationCap, ArrowLeft } from 'lucide-react'
+import {  ArrowLeft } from 'lucide-react'
+import MainButton from '../components/MainButton'
 
 export default function EnterCodePage() {
     const [code, setCode] = useState(['', '', '', '', '', ''])
@@ -44,10 +45,7 @@ export default function EnterCodePage() {
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100">
-            <header className="bg-blue-600 text-white py-4 px-6 flex items-center justify-center shadow-md">
-                <GraduationCap className="w-6 h-6 mr-2" />
-                <h1 className="text-xl font-bold">Academy Guide</h1>
-            </header>
+            
             <div className="flex-grow flex items-center justify-center px-4 py-12">
                 <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
                     <div className="bg-white shadow-lg rounded-lg p-6 max-w-md w-full">
@@ -73,7 +71,7 @@ export default function EnterCodePage() {
                                     ))}
                                 </div>
                                 {error && <p className="text-sm text-red-500 text-center mt-2">{error}</p>}
-                                <button className="w-full mt-6 bg-blue-600 hover:text-white py-2 rounded-lg hover:bg-blue-700" type="submit">Verify Code</button>
+                                <MainButton title="Verify Code" />
                             </form>
                         ) : (
                             <div className="text-center space-y-4 mt-4">

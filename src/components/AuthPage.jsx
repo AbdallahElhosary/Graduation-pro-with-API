@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { EyeIcon, EyeOffIcon, GraduationCap } from 'lucide-react';
+import MainTitle from './MainTitle';
 
 export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,10 +18,9 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       {/* Header */}
-      <header className="bg-blue-600 text-white py-4 px-6 flex items-center justify-center shadow-md">
-        <GraduationCap className="w-6 h-6 mr-2" />
-        <h1 className="text-xl font-bold mb-0">Academy Guide</h1>
-      </header>
+
+      <MainTitle title="Login / Sign up" />
+      
 
       {/* Main Content */}
       <div className="flex-grow flex items-center justify-center px-4 py-12">

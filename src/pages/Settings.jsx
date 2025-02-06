@@ -47,10 +47,6 @@ export default function SettingsPage() {
 
     return (
         <div className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
-            <header className={`py-4 px-6 flex items-center justify-center shadow-md ${darkMode ? 'bg-gray-800' : 'bg-primary text-primary-foreground'}`}>
-                <GraduationCap className="w-6 h-6 mr-2" />
-                <h1 className="text-xl font-bold">Academy Guide</h1>
-            </header>
             <main className="flex-grow container mx-auto px-4 py-12">
                 <motion.div variants={containerVariants} initial="hidden" animate="visible">
                     <motion.h1 className="text-4xl font-bold mb-8 text-center" variants={itemVariants}>

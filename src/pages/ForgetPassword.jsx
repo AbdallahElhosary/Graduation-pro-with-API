@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { GraduationCap, ArrowLeft } from 'lucide-react'
+import {  ArrowLeft } from 'lucide-react'
+import MainTitle from '../components/MainTitle'
+import MainButton from '../components/MainButton'
 
 export default function ForgotPasswordPage() {
     const [email, setEmail] = useState('')
@@ -21,11 +23,8 @@ export default function ForgotPasswordPage() {
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100">
-            <header className="bg-blue-600 text-white py-4 px-6 flex items-center justify-center shadow-md">
-                <GraduationCap className="w-6 h-6 mr-2" />
-                <h1 className="text-xl font-bold">Academy Guide</h1>
-            </header>
-            <div className="flex-grow flex items-center justify-center px-4 py-12">
+            <MainTitle title="Forget Password" />
+            <div className="flex-grow flex  justify-center px-4 py-6">
                 <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
                     <div className="bg-white shadow-lg rounded-lg p-6 max-w-md w-full">
                         <h2 className="text-2xl font-bold text-center">Forgot Password</h2>
@@ -45,7 +44,7 @@ export default function ForgotPasswordPage() {
                                     />
                                 </div>
                                 {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
-                                <button className="w-full mt-6 bg-blue-600 hover:text-white py-2 rounded-lg hover:bg-blue-700" type="submit">Reset Password</button>
+                                <MainButton title="Reset Password" />
                             </form>
                         ) : (
                             <div className="text-center space-y-4 mt-4">

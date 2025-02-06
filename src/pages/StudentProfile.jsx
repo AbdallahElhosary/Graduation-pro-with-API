@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
+import MainTitle from '../components/MainTitle';
 
 const studentData = {
     name: "Ahmed Mohamed",
@@ -19,10 +20,8 @@ const studentData = {
 
 export default function StudentProfile() {
     return (
-        <div className="min-h-screen flex flex-col bg-gray-100 text-gray-900">
-            <header className="py-4 px-6 flex items-center justify-between shadow-md bg-blue-900 text-white">
-                <h1 className="text-xl font-bold">First Semester 2024-2023</h1>
-            </header>
+        <div className="min-h-screen flex flex-col  text-gray-900">
+            <MainTitle title="First Semester 2024-2023" /> 
             <main className="container mx-auto px-4 py-6">
                 <div className="bg-blue-800 text-white p-6 rounded-lg shadow-md flex flex-col sm:flex-row justify-between items-center">
                     <div>

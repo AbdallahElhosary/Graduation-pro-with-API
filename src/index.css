@@ -3,3 +3,26 @@
 @tailwind base;
 
 
+/* Main Title Style  */
+.main-title::before,
+.main-title::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 3px;
+}
+
+.main-title::before{
+    background-color: black;
+    width: 30%;
+    z-index: 2;
+    
+}
+
+.main-title::after{
+    width: 80%;
+    background-color: white;
+    
+}
+/* End Main Title */

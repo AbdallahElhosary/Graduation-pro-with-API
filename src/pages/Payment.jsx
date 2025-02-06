@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { AlertCircle, CreditCard } from 'lucide-react'
+import MainTitle from '../components/MainTitle'
+import MainButton from '../components/MainButton'
 
 export default function PaymentPage() {
   const [paymentMethod, setPaymentMethod] = useState(null)
@@ -76,13 +78,10 @@ export default function PaymentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 p-6">
-      <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-lg shadow-sm">
-        {/* Card Header */}
-        <div className="p-6 border-b border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900">Payment</h2>
-        </div>
+    <div className="min-h-screen bg-gray-50 text-gray-900 ">
+      <MainTitle title="Payment" />
 
+      <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-lg shadow-sm p-6">
         {/* Card Content */}
         <div className="p-6">
           <motion.form
@@ -225,12 +224,8 @@ export default function PaymentPage() {
 
             {/* Submit Button */}
             <motion.div variants={itemVariants}>
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 hover:text-white  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Pay Now
-              </button>
+              
+              <MainButton title="Pay Now" />
             </motion.div>
           </motion.form>
         </div>

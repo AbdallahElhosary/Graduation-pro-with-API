@@ -1,7 +1,6 @@
 import React from "react";
-import Categories from "./components/Categories";
 import AuthPage from "./components/AuthPage";
-import { BrowserRouter, Routes, Route } from "react-router";
+import {  Routes, Route } from "react-router";
 import HomePage from "./components/Home";
 import PaymentPage from "./pages/Payment";
 import AddCourseForm from "./pages/Addcourse.jsx";
@@ -19,43 +18,45 @@ import StudentActivitiesPage from "./pages/StudentActivity.jsx";
 import AddCourseMaterial from "./pages/AddMatrial.jsx";
 import LoadingPage from "./pages/Loading.jsx";
 import StudentProfile from "./pages/StudentProfile.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+import HeaderTitle from "./components/HeaderTitle.jsx";
 
 export default function App() {
+
   return (
-    <div className="App font-sans">
+    <div className="App font-sans flex min-h-screen bg-slate-50 dark:bg-slate-900">
+      
+      <Sidebar />
+      <div className="flex-1">
+        <div className="flex min-h-screen bg-gray-100  dark:bg-slate-900">
+          <main className="flex-1">
+            <HeaderTitle />
+          
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/auth" element={<AuthPage />} />
+              <Route path="/payment" element={<PaymentPage />} />
+              <Route path="/addcourse" element={<AddCourseForm />} />
+              <Route path="/military" element={<MilitaryEducationPage />} />
+              <Route path="/courseManagement" element={<CourseManagementPage />} />
+              <Route path="/adminManagement" element={<AdminManagementPage />} />
+              <Route path="/enterCode" element={<EnterCodePage />} />
+              <Route path="/requirements" element={<RequirementsPage />} />
+              <Route path="/enrollSubjects" element={<EnrollSubjects />} />
+              <Route path="/matrial" element={<MatrialPage />} />
+              <Route path="/matrial/add" element={<AddCourseMaterial />} />
+              <Route path="/loading" element={<LoadingPage />} />
+              <Route path="/profile" element={<StudentProfile />} />
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/studentActivity" element={<StudentActivitiesPage />} />
+              <Route path="/auth/forgetPassword" element={<ForgotPasswordPage />} />
+              <Route path="/auth/resetPassword" element={<ResetPasswordPage />} />
+            </Routes>
+            
+          </main>
+        </div>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/payment" element={<PaymentPage />} />
-        <Route path="/addcourse" element={<AddCourseForm />} />
-        <Route path="/military" element={<MilitaryEducationPage />} />
-        <Route path="/courseManagement" element={<CourseManagementPage />} />
-        <Route path="/adminManagement" element={<AdminManagementPage />} />
-        <Route path="/enterCode" element={<EnterCodePage />} />
-        <Route path="/requirements" element={<RequirementsPage />} />
-        <Route path="/enrollSubjects" element={<EnrollSubjects />} />
-        <Route path="/matrial" element={<MatrialPage />} />
-        <Route path="/matrial/add" element={<AddCourseMaterial />} />
-        <Route path="/loading" element={<LoadingPage />} />
-        <Route path="/studentProfile" element={<StudentProfile />} />
-
-
-
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/studentActivity" element={<StudentActivitiesPage />} />
-
-
-
-
-
-        <Route path="/auth/forgetPassword" element={<ForgotPasswordPage />} />
-        <Route path="/auth/resetPassword" element={<ResetPasswordPage />} />
-
-
-
-      </Routes>
+      </div>
     </div>
   );
 }

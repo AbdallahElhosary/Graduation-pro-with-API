@@ -3,6 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import MainTitle from '../components/MainTitle';
+import MainButton from '../components/MainButton';
+import { ArrowLeft } from 'lucide-react';
 
 export default function ResetPasswordPage() {
     const [password, setPassword] = useState('')
@@ -36,10 +39,8 @@ export default function ResetPasswordPage() {
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100" >
-            <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-center shadow-md">
-                <h1 className="text-xl font-bold text-white">Academy Guide</h1>
-            </header>
-            <div className="flex-grow flex items-center justify-center px-4 py-12 ">
+            <MainTitle title="Reset Password" />
+            <div className="flex-grow flex  justify-center px-4 py-6 ">
                 <motion.div initial="hidden" animate="visible" variants={fadeIn} className='w-5/6 '>
                     <div className=" max-w-lg bg-white shadow-lg rounded-lg p-6 m-auto">
                         <h2 className="text-2xl font-bold text-center">Reset Password</h2>
@@ -87,7 +88,7 @@ export default function ResetPasswordPage() {
                                     </div>
                                     {error && <p className="text-sm text-red-500">{error}</p>}
                                 </div>
-                                <button className="w-full mt-6 bg-blue-500 hover:bg-blue-700 text-white p-2 rounded" type="submit">Reset Password</button>
+                                <MainButton title="Reset Password" />
                             </form>
                         ) : (
                             <div className="text-center mt-4">
@@ -95,8 +96,9 @@ export default function ResetPasswordPage() {
                                 <p>You can now log in with your new password.</p>
                             </div>
                         )}
-                        <div className="text-center mt-4">
-                            <a href="/auth" className="text-sm text-blue-500 hover:underline">Back to Login</a>
+                        <div className="flex justify-center items-center mt-4">
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            <a href="/auth" className="flex items-center text-sm text-gray-600 hover:text-blue-600">Back to Login</a>
                         </div>
                     </div>
                 </motion.div>

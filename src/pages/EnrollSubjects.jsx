@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button, Card, Form, Alert } from 'react-bootstrap';
 import { PlusCircle, Trash2, AlertCircle } from 'lucide-react';
+import MainTitle from '../components/MainTitle';
 
 const subjectOptions = [
     { id: '1', code: 'MATH101', name: 'Mathematics I', hours: 3, prerequisites: [] },
@@ -56,8 +57,8 @@ export default function EnrollSubjects() {
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100 text-dark">
-            <main className="flex-grow container mx-auto px-4 py-12">
-                <motion.h1 className="text-4xl font-bold mb-8 text-center">Subject Selection</motion.h1>
+                <MainTitle title="Subject Selection" />
+            <main className="flex-grow container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <Card>
                         <Card.Body>
