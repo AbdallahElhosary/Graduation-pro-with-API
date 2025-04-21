@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Button, Card, Form, Alert } from 'react-bootstrap';
 import { PlusCircle, Trash2, AlertCircle } from 'lucide-react';
 import MainTitle from '../components/MainTitle';

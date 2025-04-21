@@ -143,7 +143,7 @@ export default function RequirementsPage() {
       }, 2000)
       return () => clearTimeout(timer)
     }
-  }, [expandedCard.timestamp])
+  }, [expandedCard.id, expandedCard.timestamp])
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">

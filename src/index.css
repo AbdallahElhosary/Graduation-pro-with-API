@@ -16,13 +16,12 @@
 .main-title::before{
     background-color: black;
     width: 30%;
-    z-index: 2;
-    
+    z-index: 1;
 }
 
 .main-title::after{
     width: 80%;
     background-color: white;
-    
+
 }
 /* End Main Title */

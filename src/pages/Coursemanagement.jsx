@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Pencil, Trash2, Plus, Search } from 'lucide-react'
+import { Pencil, Trash2, Search } from 'lucide-react'
 import MainTitle from '../components/MainTitle'
 
 // Custom Components

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, GraduationCap } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 
 const languages = [
     { value: 'en', label: 'English' },

@@ -1,0 +1,4 @@
+export const GET_ALL_MATRIAL = "GET_ALL_MATRIAL";
+export const GET_ERROR = "GET_ERROR"
+export const ADD_MATRIAL = "ADD_MATRIAL"
+export const DELETE_MATRIAL = "DELETE_MATRIAL"

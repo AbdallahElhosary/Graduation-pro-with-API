@@ -20,9 +20,18 @@ import LoadingPage from "./pages/Loading.jsx";
 import StudentProfile from "./pages/StudentProfile.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import HeaderTitle from "./components/HeaderTitle.jsx";
+import DeleteMaterial from "./pages/DeleteMatrial.jsx";
+
+
+
+
+
 
 export default function App() {
 
+
+
+  
   return (
     <div className="App font-sans flex min-h-screen bg-slate-50 dark:bg-slate-900">
       
@@ -45,6 +54,8 @@ export default function App() {
               <Route path="/enrollSubjects" element={<EnrollSubjects />} />
               <Route path="/matrial" element={<MatrialPage />} />
               <Route path="/matrial/add" element={<AddCourseMaterial />} />
+              <Route path="/matrial/delete" element={<DeleteMaterial />} />
+
               <Route path="/loading" element={<LoadingPage />} />
               <Route path="/profile" element={<StudentProfile />} />
               <Route path="/settings" element={<SettingsPage />} />

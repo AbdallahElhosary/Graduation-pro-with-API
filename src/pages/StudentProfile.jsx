@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
 import MainTitle from '../components/MainTitle';
 
 const studentData = {

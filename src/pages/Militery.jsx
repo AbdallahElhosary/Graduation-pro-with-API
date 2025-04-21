@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Globe } from 'lucide-react'
-import militeryImg from "../img/military.jpeg"
+import militeryImg from "../img/military.jpg"
 import MainTitle from '../components/MainTitle'
 export default function MilitaryEducationPage() {
   const containerVariants = {
