@@ -44,17 +44,21 @@ const AddMatrialsHook = () => {
         setLoading(true)
 
         await dispatch(addMatrial({
-            name: matrialName,
-            instructor: matrialDoctor,
-            youtubeLink:matrialYoutLink,
-            driveLink: matrialDrivLink,
-            materialCode: matrialCode
+            
+                "name": matrialName,
+            "instructor": matrialDoctor,
+            "youtubeLink": matrialYoutLink,
+            "driveLink": matrialDrivLink,
+            "courseCode": matrialCode
+            
         }))
         setLoading(false)
 
     }
 
     const res = useSelector((state) => state.allMatrail.addMatrial);
+
+    console.log(res)
 
 
     useEffect(() => {
@@ -63,7 +67,7 @@ const AddMatrialsHook = () => {
                 if (res.status === 204) {
                     notify("Matrial Added Successfully", "success");
                     setTimeout(() => {
-                        navigate(-1)
+                        navigate('/matrial')
                     }, 1000)
                 } else {
                     notify("There is an error , please try again", "error");

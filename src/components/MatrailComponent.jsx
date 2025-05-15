@@ -2,40 +2,7 @@ import React, { useState } from 'react'
 
 import { motion } from 'framer-motion'
 import { Book, User, Youtube, FileText } from 'lucide-react'
-const courses = [
-    {
-        id: 1,
-        name: "Introduction to React",
-        description: "Learn the basics of React and build your first app",
-        instructor: "Dr. Jane Smith",
-        youtubeLink: 'https://www.youtube.com/watch?v=dummylink1',
-        driveLink: 'https://drive.google.com/file/d/dummylink1'
-    },
-    {
-        id: 2,
-        name: "Advanced JavaScript",
-        description: "Deep dive into JavaScript's advanced concepts",
-        instructor: "Prof. John Doe",
-        youtubeLink: 'https://www.youtube.com/watch?v=dummylink2',
-        driveLink: 'https://drive.google.com/file/d/dummylink2'
-    },
-    {
-        id: 3,
-        name: "Web Design Fundamentals",
-        description: "Master the principles of effective web design",
-        instructor: "Ms. Emily Brown",
-        youtubeLink: 'https://www.youtube.com/watch?v=dummylink3',
-        driveLink: 'https://drive.google.com/file/d/dummylink3'
-    },
-    {
-        id: 4,
-        name: "Web Design Fundamentals",
-        description: "Master the principles of effective web design",
-        instructor: "Ms. Emily Brown",
-        youtubeLink: 'https://www.youtube.com/watch?v=dummylink3',
-        driveLink: 'https://drive.google.com/file/d/dummylink3'
-    },
-]
+
 
 
 
